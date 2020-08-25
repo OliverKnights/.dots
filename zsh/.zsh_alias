@@ -1,0 +1,72 @@
+alias ls="ls --color=auto"
+
+# Copy, pipe to this to copy output of a command
+alias copy="xclip -i -sel clip"
+
+# tig
+alias tigs="tig status"
+
+# nvim
+alias vi="nvim"
+alias vim="nvim"
+
+alias ra='ranger --cmd "set show_hidden=true"'
+
+# Docker
+alias ds="docker stop"
+alias dt="docker start"
+alias dps="docker ps"
+alias dsa='docker stop $(docker ps -a -q)'
+alias da="docker attach --sig-proxy=false"
+alias dl="docker logs -f"
+
+# Docker compose
+alias dc="docker-compose"
+alias dcl="docker-compose logs -f --tail=0"
+alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
+alias dcb="docker-compose build"
+alias dcs="docker-compose stop"
+
+# Go
+alias gt="go test"
+
+# Git
+alias gcd='cd $(git rev-parse --show-toplevel)'
+# push
+alias gp="git push"
+# checkout
+alias gcb="git checkout -b"
+# status
+alias gs="git status"
+# fetch
+alias gf="git fetch"
+# pull
+alias gF="git pull"
+# diff
+alias gd="git diff"
+
+alias commitmsgdate='git add . && git commit -m "$(date)"'
+
+# Custom git functions
+## Use fzf to checkout a branch
+alias gco="gcheckout"
+
+# Decode JWT header
+alias decodejwtheader="decodejwt 1"
+
+# Decode JWT Payload
+alias decodejwtpayload="decodejwt 2"
+
+# Zsh
+alias reloadzsh="source $HOME/.zshrc"
+
+# Dotfiles
+alias tmuxconfig="vi $HOME/.cfg/tmux/.tmux.conf"
+
+alias lynx="lynx -vikeys"
+
+alias tasks="vi +Tasks"
+alias today="vi +Today"
+alias yesterday="vi +Yesterday"
+alias tomorrow="vi +Tomorrow"

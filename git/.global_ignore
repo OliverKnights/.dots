@@ -1,0 +1,12 @@
+tags
+nohup.out
+.projections.json
+.DS_Store
+yarn-error.log
+.envrc
+.ccls
+.ccls-cache/
+.env
+.idea/
+$HOME/.config/nvim/pack
+.cfg

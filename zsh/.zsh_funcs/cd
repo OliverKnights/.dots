@@ -1,0 +1,2 @@
+# auto ls
+builtin cd "$@" && ls --color=auto -F

@@ -1,0 +1,8 @@
+if tmux has-session -t dots; then
+  tmux attach -t dots
+else
+  tmux new-session -s dots
+  tmux rename-window -t dots:1 src
+  tmux send-keys -t dots:src 'cd ~/.dots && vi' C-m
+fi
+
