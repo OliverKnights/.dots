@@ -4,6 +4,7 @@ general:
     autoconf \
     automake \
     bison \
+    shellcheck \
     build-essential \
     ca-certificates \
     cmake \
