@@ -62,7 +62,7 @@ alias decodejwtpayload="decodejwt 2"
 alias reloadzsh="source $HOME/.zshrc"
 
 # Dotfiles
-alias tmuxconfig="vi $HOME/.cfg/tmux/.tmux.conf"
+alias tmuxconfig="vi $HOME/.dots/tmux/.tmux.conf"
 
 alias lynx="lynx -vikeys"
 
