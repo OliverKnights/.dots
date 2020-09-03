@@ -1,105 +1,44 @@
-general:
-  sudo apt install \
-    apt-transport-https \
-    autoconf \
-    automake \
-    bison \
-    shellcheck \
-    build-essential \
-    ca-certificates \
-    cmake \
-    curl \
-    direnv \
-    flex \
-    g++ \
-    gettext \
-    git \
-    gnome-tweak-tool \
-    gnupg-agent \
-    gnupg2 \
-    htop \
-    jq \
-    libfontconfig1-dev \
-    libfreetype6-dev \
-    libgif-dev \
-    libgmp-dev \
-    libgnutls28-dev \
-    libgtk2.0-dev \
-    libicu-dev \
-    libjansson-dev \
-    libjansson4 \
-    libjpeg-dev \
-    libncurses-dev \
-    libncurses5-dev \
-    libncursesw5-dev \
-    libpng-dev \
-    libssl-dev \
-    libtiff-dev \
-    libtinfo-dev \
-    libtool \
-    libtool-bin \
-    libx11-dev \
-    libxcb-xfixes0-dev \
-    libxpm-dev \
-    lynx \
-    mailutils \
-    meld \
-    mysql-client \
-    ncdu \
-    network-manager-openvpn \
-    network-manager-openvpn-gnome \
-    ninja-build \
-    openssh-server \
-    openvpn \
-    pandoc \
-    pkg-config \
-    python3 \
-    python3-pip \
-    ranger \
-    resolvconf \
-    software-properties-common \
-    stow \
-    taskwarrior \
-    tcpdump \
-    texinfo \
-    tig \
-    tlp \
-    tmux \
-    unzip \
-    wmctrl \
-    xbacklight \
-    xclip \
-    xdotool \
-    zeal
-    zsh \
+* Package manager
+#+begin_src sh
+sudo apt install -y apt-transport-https autoconf automake bison shellcheck build-essential ca-certificates cmake curl direnv flex g++ gettext git gnome-tweak-tool gnupg-agent gnupg2 htop jq libfontconfig1-dev libfreetype6-dev libgif-dev libgmp-dev libgnutls28-dev libgtk2.0-dev libicu-dev libjansson-dev libjansson4 libjpeg-dev libncurses-dev libncurses5-dev libncursesw5-dev libpng-dev libssl-dev libtiff-dev libtinfo-dev libtool libtool-bin libx11-dev libxcb-xfixes0-dev libxpm-dev lynx mailutils meld mysql-client ncdu network-manager-openvpn network-manager-openvpn-gnome ninja-build openssh-server openvpn pandoc pkg-config python3 python3-pip ranger resolvconf software-properties-common stow taskwarrior tcpdump texinfo tig tlp tmux unzip wmctrl xbacklight xclip xdotool zeal zsh 
+#+end_src
 
-neovim:
+* From source
+** neovim
+#+begin_src sh
   git clone https://github.com/neovim/neovim
   make
   sudo make install
   Python lib:
-    sudo -H pip3 install neovim
+  sudo -H pip3 install neovim
+#+end_src
 
-cmake:
-  > Might not need this
+** cmake
+Might not need this
+#+begin_src sh
   wget https://github.com/Kitware/CMake/releases/download/v3.18.1/cmake-3.18.1.tar.gz
   tar -xvf cmake-3.18.1.tar.gz
   ./bootstrap
   make
   sudo make install
+#+end_src
+** tmux
+Libevent
 
-tmux:
-  libevent:
-    ./autogen.sh
-    ./configure
-    make
-    sudo make install
-
+#+begin_src sh
+  ./autogen.sh
   ./configure
   make
   sudo make install
+#+end_src
 
-alacritty:
+#+begin_src sh
+  ./configure
+  make
+  sudo make install
+#+end_src
+
+** alacritty
   rustup:
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     source $HOME/.cargo/env
@@ -112,7 +51,7 @@ alacritty:
   sudo desktop-file-install extra/linux/Alacritty.desktop
   sudo update-desktop-database
 
-docker:
+** docker
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
   sudo apt update
@@ -122,22 +61,22 @@ docker:
   su - ${USER}
   sudo usermod -aG docker username
 
-docker-compose:
+** docker-compose
   sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
   sudo chmod +x /usr/local/bin/docker-compose
 
-go:
+** go
   wget https://golang.org/dl/go1.14.6.linux-amd64.tar.gz
   sudo tar -C /usr/local -xzf go1.14.6.linux-amd64.tar.gz
 
   tools:
     go get golang.org/x/tools/gopls
 
-delta:
+** delta
   wget https://github.com/dandavison/delta/releases/download/0.4.0/git-delta_0.4.0_amd64.deb
   sudo dpkg -i git-delta_0.4.0_amd64.deb
 
-emacs:
+** emacs
   https://masteringemacs.org/article/speed-up-emacs-libjansson-native-elisp-compilation
   git clone https://git.savannah.gnu.org/git/emacs.git
   git checkout feature/native-comp
@@ -150,20 +89,21 @@ emacs:
   ./configure --with-nativecomp --with-mailutils
   make -j4 && sudo make install
 
-zoxide:
+** zoxide
   curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh
-
-snaps:
+** ripgrep
+  curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
+  sudo dpkg -i ripgrep_11.0.2_amd64.deb
+** fzf
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
+* Snaps
   snap install spotify
   snap install ccls --classic
   snap install node --classic --channel=8
-  node tools:
-    sudo -H npm install -g typescript-language-server
+* Node
+#+begin_src sh
+ sudo -H npm install -g typescript-language-server
+#+end_src
 
-ripgrep:
-  curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
-  sudo dpkg -i ripgrep_11.0.2_amd64.deb
 
-fzf:
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
