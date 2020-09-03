@@ -140,6 +140,7 @@ delta:
 emacs:
   https://masteringemacs.org/article/speed-up-emacs-libjansson-native-elisp-compilation
   git clone https://git.savannah.gnu.org/git/emacs.git
+  git checkout feature/native-comp
   sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa \
       sudo add-apt-repository ppa:ubuntu-toolchain-r/test \
         && sudo apt-get update -y \
