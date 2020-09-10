@@ -43,3 +43,5 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
 export PATH=$PATH:$HOME/.cabal/bin
 export PATH=$PATH:$HOME/.local/bin
+
+export BAT_THEME="GitHub"

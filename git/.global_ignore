@@ -9,4 +9,5 @@ yarn-error.log
 .env
 .idea/
 $HOME/.config/nvim/pack
-.cfg
+.bin
+

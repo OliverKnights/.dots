@@ -159,8 +159,19 @@ snap install node --classic --channel=8
 ```
 
 # Node
+
+Don't use sudo for npm
+https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-still-66e609f5f92
+
 ```
-sudo -H npm install -g typescript-language-server
+npm install -g typescript-language-server
+```
+
+## Bat
+
+```
+wget https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.15.4_amd64.deb
+sudo dpkg -i bat_0.15.4_amd64.deb
 ```
 
 # Keymaps
