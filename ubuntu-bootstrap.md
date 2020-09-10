@@ -1,7 +1,7 @@
 # Package manager
 
 ```
-sudo apt install -y apt-transport-https autoconf automake bison shellcheck build-essential ca-certificates cmake curl direnv flex g++ gettext git gnome-tweak-tool gnupg-agent gnupg2 htop jq libfontconfig1-dev libfreetype6-dev libgif-dev libgmp-dev libgnutls28-dev libgtk2.0-dev libicu-dev libjansson-dev libjansson4 libjpeg-dev libncurses-dev libncurses5-dev libncursesw5-dev libpng-dev libssl-dev libtiff-dev libtinfo-dev libtool libtool-bin libx11-dev libxcb-xfixes0-dev libxpm-dev lynx mailutils meld mysql-client ncdu network-manager-openvpn network-manager-openvpn-gnome ninja-build openssh-server openvpn pandoc pkg-config python3 python3-pip ranger resolvconf software-properties-common stow taskwarrior tcpdump texinfo tig tlp unzip wmctrl xbacklight xclip xdotool zeal zsh dconf-tools
+sudo apt install -y apt-transport-https autoconf automake bison shellcheck build-essential ca-certificates cmake curl direnv flex g++ gettext git gnome-tweak-tool gnupg-agent gnupg2 htop jq libfontconfig1-dev libfreetype6-dev libgif-dev libgmp-dev libgnutls28-dev libgtk2.0-dev libicu-dev libjansson-dev libjansson4 libjpeg-dev libncurses-dev libncurses5-dev libncursesw5-dev libpng-dev libssl-dev libtiff-dev libtinfo-dev libtool libtool-bin libx11-dev libxcb-xfixes0-dev libxpm-dev lynx mailutils meld mysql-client ncdu network-manager-openvpn network-manager-openvpn-gnome ninja-build openssh-server openvpn pandoc pkg-config python3 python3-pip ranger resolvconf software-properties-common stow taskwarrior tcpdump texinfo tig tlp unzip wmctrl xbacklight xclip xdotool zeal zsh dconf-tools rlwrap
 ```
 
 # From source
