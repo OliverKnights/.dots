@@ -9,11 +9,12 @@ sudo apt install -y apt-transport-https autoconf automake bison shellcheck build
 
 ```
 git clone https://github.com/neovim/neovim
-  make
-  sudo make install
-  Python lib:
-  sudo -H pip3 install neovim
+make CMAKE_BUILD_TYPE=Release
+sudo make install
 ```
+
+### Python lib
+`sudo -H pip3 install neovim`
 
 ### neovim remote
 
