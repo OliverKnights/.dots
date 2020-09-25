@@ -8,7 +8,6 @@ alias tigs="tig status"
 
 # nvim
 alias vi="nvim"
-alias vim="nvim"
 
 alias ra='ranger --cmd "set show_hidden=true"'
 
