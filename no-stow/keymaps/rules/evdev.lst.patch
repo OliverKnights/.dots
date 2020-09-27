@@ -1,0 +1,10 @@
+--- /home/oliver/mounts/evdev.lst	2020-09-26 17:22:19.337836937 +0100
++++ evdev.lst	2020-09-04 18:20:36.000000000 +0100
+@@ -791,6 +791,7 @@
+   ctrl:rctrl_ralt      Right Ctrl as Right Alt
+   ctrl:menu_rctrl      Menu as Right Ctrl
+   ctrl:swap_lalt_lctl  Swap Left Alt with Left Ctrl
++  ctrl:swap_ralt_rctl  Swap Right Alt with Right Ctrl
+   ctrl:swap_lwin_lctl  Swap Left Win with Left Ctrl
+   ctrl:swap_rwin_rctl  Swap Right Win with Right Ctrl
+   ctrl:swap_lalt_lctl_lwin Left Alt as Ctrl, Left Ctrl as Win, Left Win as Left Alt

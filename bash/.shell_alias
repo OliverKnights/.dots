@@ -4,12 +4,16 @@ alias ls="ls --color=auto"
 alias copy="xclip -i -sel clip"
 
 # tig
-alias tigs="tig status"
+alias ts="tig status"
 
 # nvim
 alias vi="nvim"
 
 alias ra='ranger --cmd "set show_hidden=true"'
+
+# Emacs
+
+alias em='TERM=xterm-24bit emacs -nw'
 
 # Docker
 alias ds="docker stop"
@@ -45,23 +49,23 @@ alias gF="git pull"
 # diff
 alias gd="git diff"
 
-alias commitmsgdate='git add . && git commit -m "$(date)"'
+alias commit-msg-date='git add . && git commit -m "$(date)"'
 
 # Custom git functions
 ## Use fzf to checkout a branch
 alias gco="gcheckout"
 
 # Decode JWT header
-alias decodejwtheader="decodejwt 1"
+alias decode-jwt-header="decodejwt 1"
 
 # Decode JWT Payload
-alias decodejwtpayload="decodejwt 2"
+alias decode-jwt-payload="decodejwt 2"
 
 # Zsh
-alias reloadzsh="source $HOME/.zshrc"
+alias reload-zsh="source $HOME/.zshrc"
 
 # Dotfiles
-alias tmuxconfig="vi $HOME/.dots/tmux/.tmux.conf"
+alias open-tmux-config="vi $HOME/.dots/tmux/.tmux.conf"
 
 alias lynx="lynx -vikeys"
 
@@ -69,3 +73,4 @@ alias tasks="vi +Tasks"
 alias today="vi +Today"
 alias yesterday="vi +Yesterday"
 alias tomorrow="vi +Tomorrow"
+

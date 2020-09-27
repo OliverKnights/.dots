@@ -1,5 +1,5 @@
-# Use emacs mode
-bindkey -e
+# Use vi mode
+bindkey -v
 
 setopt share_history
 setopt rm_star_silent
@@ -26,11 +26,11 @@ colors
 PS1="%{$fg[green]%}%c%{$reset_color%} "
 
 # Load aliases
-source $HOME/.zsh_alias
-[ -f $HOME/.private_zsh_alias ] && source $HOME/.private_zsh_alias
+[ -f $HOME/.shell_alias ] && source $HOME/.shell_alias
+[ -f $HOME/.private_shell_alias ] && source $HOME/.private_shell_alias
 
 # fzf
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+# [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # Load direnv
 if hash direnv 2>/dev/null
@@ -61,8 +61,6 @@ done;
 
 # autoload prompt
 autoload -U promptinit; promptinit
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVM_DIR="$HOME/.config"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
