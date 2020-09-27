@@ -105,6 +105,7 @@ sudo tar -C /usr/local -xzf go1.14.6.linux-amd64.tar.gz
 
 ```
 go get golang.org/x/tools/gopls
+go get github.com/jesseduffield/lazygit
 ```
 
 ## delta
@@ -175,7 +176,26 @@ wget https://github.com/sharkdp/bat/releases/download/v0.15.4/bat_0.15.4_amd64.d
 sudo dpkg -i bat_0.15.4_amd64.deb
 ```
 
+## Tig
+
+wget https://github.com/jonas/tig/releases/download/tig-2.5.1/tig-2.5.1.tar.gz
+
 # Keymaps
 
 https://askubuntu.com/questions/885045/how-to-swap-ctrl-and-alt-keys-in-ubuntu-16-04
+https://askubuntu.com/questions/1133312/how-do-i-remap-caps-lock-to-hyper-key-in-ubuntu-18-04
+See copies of files in ./no-stow/keymaps
 
+# Terminal colors
+
+https://github.com/syl20bnr/spacemacs/wiki/Terminal
+
+# Useful commands
+
+```
+# Set bash to vi mode temporarily
+set -o vi
+
+# Or permanantly using readline
+echo "set show-mode-in-prompt on" >> ~/.inputrc
+```
