@@ -2,9 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# Vi mode
-set -o vi
-
 # Append to history
 shopt -s histappend
 
