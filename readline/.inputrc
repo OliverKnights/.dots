@@ -1,3 +1,3 @@
 set editing-mode vi
 set show-mode-in-prompt on
-set history-preserve-point on
+set keyseq-timeout 1
