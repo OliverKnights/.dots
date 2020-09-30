@@ -1,4 +1,7 @@
+# Ignore tags file, excluding directories named tag
 tags
+!tags/
+
 nohup.out
 .projections.json
 .DS_Store
