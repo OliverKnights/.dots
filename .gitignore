@@ -1,4 +1,5 @@
 nvim/.config/nvim/pack
 nvim/.config/nvim/private/*
 nvim/.config/nvim/.netrwhist
+emacs/.emacs.d/*
 
