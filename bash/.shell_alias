@@ -7,7 +7,7 @@ alias copy="xclip -i -sel clip"
 alias ts="tig status"
 
 # nvim
-alias vi="nvim"
+alias vi="NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim"
 
 alias ra='ranger --cmd "set show_hidden=true"'
 
