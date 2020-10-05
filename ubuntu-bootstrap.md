@@ -190,12 +190,3 @@ See copies of files in ./no-stow/keymaps
 
 https://github.com/syl20bnr/spacemacs/wiki/Terminal
 
-# Useful commands
-
-```
-# Set bash to vi mode temporarily
-set -o vi
-
-# Or permanantly using readline
-echo "set show-mode-in-prompt on" >> ~/.inputrc
-```
