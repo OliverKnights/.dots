@@ -157,10 +157,14 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ```
 snap install spotify
 snap install ccls --classic
-snap install node --classic --channel=8
 ```
 
 # Node
+
+```
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+```
 
 Don't use sudo for npm
 https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-still-66e609f5f92
