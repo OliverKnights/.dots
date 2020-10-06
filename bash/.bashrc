@@ -1,6 +1,14 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# Disable Ctrl-s flow control
+stty -ixon
 
 # Append to history
 shopt -s histappend
@@ -20,12 +28,6 @@ HISTSIZE=-1
 
 # Do not store a duplicate of the last entered command
 HISTCONTROL=ignoredups
-
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -137,3 +139,6 @@ fi
 man-to-pdf () {
   man -Thtml "$1" > "/tmp/$1.html"; pandoc --latex-engine=xelatex "/tmp/$1.html" -o "$1.pdf"
 }
+
+# Source fzf if we have it
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
