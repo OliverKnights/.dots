@@ -141,4 +141,6 @@ man-to-pdf () {
 }
 
 # Source fzf if we have it
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+if [ "$TERM" != "dumb" ]; then
+    [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+fi

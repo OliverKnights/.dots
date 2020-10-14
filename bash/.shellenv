@@ -1,5 +1,5 @@
-export VISUAL='nvr'
-export EDITOR='nvr'
+export VISUAL='nvim'
+export EDITOR='nvim'
 export ALTERNATE_EDITOR=""
 
 export NNN_USE_EDITOR=1
