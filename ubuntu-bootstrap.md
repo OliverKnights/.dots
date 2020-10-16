@@ -115,23 +115,6 @@ wget https://github.com/dandavison/delta/releases/download/0.4.0/git-delta_0.4.0
 sudo dpkg -i git-delta_0.4.0_amd64.deb
 ```
 
-## emacs
-
-https://masteringemacs.org/article/speed-up-emacs-libjansson-native-elisp-compilation
-
-```
-git clone https://git.savannah.gnu.org/git/emacs.git
-git checkout feature/native-comp
-sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa \
-    sudo add-apt-repository ppa:ubuntu-toolchain-r/test \
-      && sudo apt-get update -y \
-      && sudo apt-get install -y gcc-10 libgccjit0 libgccjit-10-dev
-export CC="gcc-10"
-./autogen.sh
-./configure --with-nativecomp --with-mailutils
-make -j4 && sudo make install
-```
-
 ## zoxide
 
 ```
