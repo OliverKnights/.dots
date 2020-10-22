@@ -1,7 +1,0 @@
-# append output to a file
-selection=$(rg --files | fzf)
-echo $selection
-
-# read in
-# echo $in
-# echo $in >> $selection

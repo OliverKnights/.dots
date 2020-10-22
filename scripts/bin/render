@@ -1,1 +1,4 @@
+#!/bin/bash
+
 pandoc "$@" | lynx -vikeys -stdin
+

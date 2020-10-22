@@ -140,6 +140,11 @@ man-to-pdf () {
   man -Thtml "$1" > "/tmp/$1.html"; pandoc --latex-engine=xelatex "/tmp/$1.html" -o "$1.pdf"
 }
 
+# auto ls after cd
+cd () {
+  builtin cd "$@" && ls --color=auto -F
+}
+
 # Source fzf if we have it
 if [ "$TERM" != "dumb" ]; then
     [ -f ~/.fzf.bash ] && source ~/.fzf.bash
