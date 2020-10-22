@@ -136,6 +136,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Load functions
+if [ -d ~/.bash_functions ]; then
+    for file in ~/.bash_functions/*; do
+        . "$file"
+    done
+fi
+
 man-to-pdf () {
   man -Thtml "$1" > "/tmp/$1.html"; pandoc --latex-engine=xelatex "/tmp/$1.html" -o "$1.pdf"
 }
