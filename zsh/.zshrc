@@ -1,5 +1,5 @@
-# Use vi mode
-bindkey -v
+# Use emacs mode
+bindkey -e
 
 setopt share_history
 setopt rm_star_silent
@@ -30,7 +30,7 @@ PS1="%{$fg[green]%}%c%{$reset_color%} "
 [ -f $HOME/.private_shell_alias ] && source $HOME/.private_shell_alias
 
 # fzf
-# [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # Load direnv
 if hash direnv 2>/dev/null
