@@ -1,7 +1,7 @@
 # Package manager
 
 ```
-sudo apt install -y apt-transport-https autoconf automake bison shellcheck build-essential ca-certificates cmake curl direnv flex g++ gettext git gnome-tweak-tool gnupg-agent gnupg2 htop jq libfontconfig1-dev libfreetype6-dev libgif-dev libgmp-dev libgnutls28-dev libgtk2.0-dev libicu-dev libjansson-dev libjansson4 libjpeg-dev libncurses-dev libncurses5-dev libncursesw5-dev libpng-dev libssl-dev libtiff-dev libtinfo-dev libtool libtool-bin libx11-dev libxcb-xfixes0-dev libxpm-dev lynx mailutils meld mysql-client ncdu network-manager-openvpn network-manager-openvpn-gnome ninja-build openssh-server openvpn pandoc pkg-config python3 python3-pip ranger resolvconf software-properties-common stow taskwarrior tcpdump texinfo tig tlp unzip wmctrl xbacklight xclip xdotool zeal zsh dconf-tools rlwrap
+sudo apt install -y apt-transport-https autoconf automake bison shellcheck build-essential ca-certificates make cmake curl direnv flex g++ gettext git gnome-tweak-tool gnupg-agent gnupg2 htop jq libfontconfig1-dev libfreetype6-dev libgif-dev libgmp-dev libgnutls28-dev libgtk2.0-dev libicu-dev libjansson-dev libjansson4 libjpeg-dev libncurses-dev libncurses5-dev libncursesw5-dev libpng-dev libssl-dev libtiff-dev libtinfo-dev libtool libtool-bin libx11-dev libxcb-xfixes0-dev libxpm-dev lynx mailutils meld mysql-client ncdu network-manager-openvpn network-manager-openvpn-gnome ninja-build openssh-server openvpn pandoc pkg-config python3 python3-pip ranger resolvconf software-properties-common stow taskwarrior tcpdump texinfo tig tlp unzip wmctrl xbacklight xclip xdotool zeal zsh dconf-tools rlwrap gcc pkg-config autoconf automake python3-docutils libseccomp-dev libjansson-dev libyaml-dev libxml2-dev
 ```
 
 # From source
@@ -166,6 +166,15 @@ sudo dpkg -i bat_0.15.4_amd64.deb
 ## Tig
 
 wget https://github.com/jonas/tig/releases/download/tig-2.5.1/tig-2.5.1.tar.gz
+
+## Ctags
+
+```
+./autogen.sh
+./configure
+make
+sudo make install
+```
 
 # Keymaps
 
