@@ -1,0 +1,50 @@
+#!/bin/bash
+
+set -uo pipefail
+
+command="$1"
+stow_dirs=(alacritty bash git i3 nvim picom readline scripts tmux)
+
+install() {
+  echo "Updating..."
+  sudo apt update && sudo apt upgrade -y
+  sudo apt autoremove -y
+  sudo apt install stow
+
+  echo "Symlinking with stow.."
+  for dir in "${stow_dirs[@]}"; do
+    echo "Linking $dir..."
+    stow -d "$dotfiles_dir" "$dir"
+  done
+}
+
+uninstall() {
+  for dir in "${stow_dirs[@]}"; do
+    echo "Unlinking $dir..."
+    stow -d "$dotfiles_dir" -D "$dir"
+  done
+}
+
+help() {
+  cat <<EOF
+install
+
+uninstall
+
+help
+EOF
+}
+
+case $command in
+  install)
+    install
+    ;;
+
+  uninstall)
+    uninstall
+    ;;
+
+  help)
+    help
+    ;;
+esac

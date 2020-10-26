@@ -186,3 +186,4 @@ See copies of files in ./no-stow/keymaps
 
 https://github.com/syl20bnr/spacemacs/wiki/Terminal
 
+https://gist.github.com/manasthakur/d4dc9a610884c60d944a4dd97f0b3560
