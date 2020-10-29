@@ -34,3 +34,6 @@
 [submodule "nvim/.config/nvim/pack/plugins/start/vim-dirvish"]
 	path = nvim/.config/nvim/pack/plugins/start/vim-dirvish
 	url = https://github.com/justinmk/vim-dirvish
+[submodule "nvim/.config/nvim/pack/plugins/start/vim-fugitive"]
+	path = nvim/.config/nvim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
