@@ -20,6 +20,7 @@ alias ds="docker stop"
 alias dt="docker start"
 alias dps="docker ps"
 alias dsa='docker stop $(docker ps -a -q)'
+alias dra='docker rm $(docker ps -a -q)'
 alias da="docker attach --sig-proxy=false"
 alias dl="docker logs -f"
 
