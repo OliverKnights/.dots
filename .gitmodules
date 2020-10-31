@@ -1,9 +1,6 @@
 [submodule "nvim/.config/nvim/pack/plugins/opt/nvim-lsp"]
 	path = nvim/.config/nvim/pack/plugins/opt/nvim-lsp
 	url = https://github.com/neovim/nvim-lsp
-[submodule "nvim/.config/nvim/pack/plugins/start/vim-dispatch"]
-	path = nvim/.config/nvim/pack/plugins/start/vim-dispatch
-	url = https://github.com/tpope/vim-dispatch
 [submodule "nvim/.config/nvim/pack/plugins/start/vim-rsi"]
 	path = nvim/.config/nvim/pack/plugins/start/vim-rsi
 	url = https://github.com/tpope/vim-rsi
@@ -13,9 +10,6 @@
 [submodule "nvim/.config/nvim/pack/plugins/start/vim-speeddating"]
 	path = nvim/.config/nvim/pack/plugins/start/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating
-[submodule "nvim/.config/nvim/pack/plugins/start/vim-eunuch"]
-	path = nvim/.config/nvim/pack/plugins/start/vim-eunuch
-	url = https://github.com/tpope/vim-eunuch
 [submodule "nvim/.config/nvim/pack/plugins/start/vim-unimpaired"]
 	path = nvim/.config/nvim/pack/plugins/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
@@ -28,12 +22,3 @@
 [submodule "nvim/.config/nvim/pack/plugins/start/vim-surround"]
 	path = nvim/.config/nvim/pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround
-[submodule "nvim/.config/nvim/pack/plugins/start/vim-markdown"]
-	path = nvim/.config/nvim/pack/plugins/start/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown
-[submodule "nvim/.config/nvim/pack/plugins/start/vim-dirvish"]
-	path = nvim/.config/nvim/pack/plugins/start/vim-dirvish
-	url = https://github.com/justinmk/vim-dirvish
-[submodule "nvim/.config/nvim/pack/plugins/start/vim-fugitive"]
-	path = nvim/.config/nvim/pack/plugins/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
