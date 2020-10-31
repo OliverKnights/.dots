@@ -37,17 +37,13 @@ alias gt="go test"
 
 # Git
 alias gcd='cd $(git rev-parse --show-toplevel)'
-# push
+alias gaa='git add . && git status'
 alias gp="git push"
-# checkout
-alias gcb="git checkout -b"
-# status
+alias gc="git commit"
+alias ghb="git checkout -b"
 alias gs="git status"
-# fetch
 alias gf="git fetch"
-# pull
-alias gF="git pull"
-# diff
+alias gu="git pull"
 alias gd="git diff"
 
 alias commit-msg-date='git add . && git commit -m "$(date)"'
