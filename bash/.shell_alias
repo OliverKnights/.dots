@@ -9,12 +9,6 @@ alias ts="tig status"
 # nvim
 alias vi="NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim"
 
-alias ra='ranger --cmd "set show_hidden=true"'
-
-# Emacs
-
-alias em='TERM=xterm-24bit emacs -nw'
-
 # Docker
 alias ds="docker stop"
 alias dt="docker start"
@@ -40,6 +34,7 @@ alias gcd='cd $(git rev-parse --show-toplevel)'
 alias gaa='git add . && git status'
 alias gp="git push"
 alias gc="git commit"
+alias gh="git checkout"
 alias ghb="git checkout -b"
 alias gs="git status"
 alias gf="git fetch"
@@ -48,18 +43,14 @@ alias gd="git diff"
 
 alias commit-msg-date='git add . && git commit -m "$(date)"'
 
-# Custom git functions
-## Use fzf to checkout a branch
-alias gco="gcheckout"
-
 # Decode JWT header
-alias decode-jwt-header="decodejwt 1"
+alias decode-jwt-header="decode-jwt 1"
 
 # Decode JWT Payload
-alias decode-jwt-payload="decodejwt 2"
+alias decode-jwt-payload="decode-jwt 2"
 
 # Zsh
-alias reload-zsh="source $HOME/.zshrc"
+alias reload-bash="source $HOME/.bashrc"
 
 # Dotfiles
 alias open-tmux-config="vi $HOME/.dots/tmux/.tmux.conf"

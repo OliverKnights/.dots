@@ -21,10 +21,6 @@ export FZF_DEFAULT_COMMAND='rg \
              -g "!.DS_Store" \
              --ignore-file "./.project_ignore"'
 
-# ls colors
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-
 # better less
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 
