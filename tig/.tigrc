@@ -1,0 +1,100 @@
+set git-colors = no
+color default white black
+
+color header white black
+color section white black
+color search-result white black
+
+# diff view
+color diff-header white black
+color diff-index white black
+color diff-oldmode white black
+color diff-newmode white black
+color "rename from " white black
+color "rename to " white black
+color "similarity " white black
+color "dissimilarity " white black
+color diff-stat white black
+color diff-chunk white black
+color diff-add white 46
+color diff-add-highlight white black
+color diff-del white 196
+color diff-del-highlight white black
+color " +" white black
+color " -" white black
+color "--- " white black
+color "+++ " white black
+color "Merge: " white black
+color "Refs: " white black
+color "commit " white black
+color "Commit: " white black
+color "CommitDate: " white black
+color "Author: " white black
+color "AuthorDate: " white black
+color "Tagger: " white black
+color "TaggerDate: " white black
+color "---" white black
+
+# log view, mostly
+color "Date: " white black
+color " Signed-off-by" white black
+color " Acked-by" white black
+color " Tested-by" white black
+color " Reviewed-by" white black
+
+# main view
+color author white black
+color date white black
+color graph-commit white black
+color id white black
+color main-remote white black
+color main-tracked white black
+color main-tag white black
+color main-local-tag white black
+color main-head white black
+color main-ref white black
+color overflow white black
+
+# window dressing
+color title-blur white black
+color title-focus white black
+color cursor white black reverse
+color status white black
+
+# tree view
+color mode white black
+color directory white black
+color file white black
+
+# status view
+color stat-none white black
+color stat-staged white black
+color stat-unstaged white black
+color stat-untracked white black
+
+# lines in digraph
+color palette-0 white black
+color palette-1 white black
+color palette-2 white black
+color palette-3 white black
+color palette-4 white black
+color palette-5 white black
+color palette-6 white black
+color palette-7 white black
+# repeat
+color palette-8 white black
+color palette-9 white black
+color palette-10 white black
+color palette-11 white black
+color palette-12 white black
+color palette-13 white black
+
+# grep view
+color grep.file white black
+color grep.line-number white black
+color grep.delimiter white black
+color delimiter white black
+
+# help view
+color help-group white black
+color help-action white black

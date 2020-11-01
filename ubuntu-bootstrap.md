@@ -108,13 +108,6 @@ go get golang.org/x/tools/gopls
 go get github.com/jesseduffield/lazygit
 ```
 
-## delta
-
-```
-wget https://github.com/dandavison/delta/releases/download/0.4.0/git-delta_0.4.0_amd64.deb
-sudo dpkg -i git-delta_0.4.0_amd64.deb
-```
-
 ## zoxide
 
 ```
