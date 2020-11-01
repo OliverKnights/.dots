@@ -11,6 +11,5 @@ yarn-error.log
 .ccls-cache/
 .env
 .idea/
-$HOME/.config/nvim/pack
 .bin
 
