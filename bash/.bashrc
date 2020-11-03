@@ -10,36 +10,6 @@ esac
 # Disable Ctrl-s flow control
 stty -ixon
 
-# Append to history
-shopt -s histappend
-
-# Attempt to save all lines of a multiple-line command in the same entry
-shopt -s cmdhist
-
-# After each command, append, clear, reload new history
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$"\n"}history -a; history -c; history -r"
-
-# Print the timestamp of each command (%Y-%m-%d %H:%M:%S)
-HISTTIMEFORMAT='%F %T '
-
-# Set no limit for history file size
-HISTFILESIZE=-1
-HISTSIZE=-1
-
-# Do not store a duplicate of the last entered command
-HISTCONTROL=ignoredups
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -147,3 +117,5 @@ fi
 
 # Custom ls colors
 eval "$(dircolors $dotfiles_dir/no-stow/dircolors)"
+
+source "$dotfiles_dir/bash/sync-history.sh"

@@ -19,6 +19,7 @@ export FZF_DEFAULT_COMMAND='rg \
              -g "!{.git,node_modules,bin,Library,Downloads,Music,.Trash,.Private,.cache,snap,tags}/" \
              -g "!tags" \
              -g "!.DS_Store" \
+             -g "!vendor" \
              --ignore-file "./.project_ignore"'
 
 # better less
