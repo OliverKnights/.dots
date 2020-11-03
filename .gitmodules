@@ -1,6 +1,3 @@
-[submodule "nvim/.config/nvim/pack/plugins/opt/nvim-lsp"]
-	path = nvim/.config/nvim/pack/plugins/opt/nvim-lsp
-	url = https://github.com/neovim/nvim-lsp
 [submodule "nvim/.config/nvim/pack/plugins/start/vim-rsi"]
 	path = nvim/.config/nvim/pack/plugins/start/vim-rsi
 	url = https://github.com/tpope/vim-rsi
@@ -25,3 +22,6 @@
 [submodule "nvim/.config/nvim/pack/plugins/start/nvim-colorizer.lua"]
 	path = nvim/.config/nvim/pack/plugins/start/nvim-colorizer.lua
 	url = https://github.com/norcalli/nvim-colorizer.lua
+[submodule "nvim/.config/nvim/pack/plugins/start/vim-lsc"]
+	path = nvim/.config/nvim/pack/plugins/start/vim-lsc
+	url = https://github.com/natebosch/vim-lsc
