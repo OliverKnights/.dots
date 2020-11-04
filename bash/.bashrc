@@ -116,6 +116,6 @@ if [ "$TERM" != "dumb" ]; then
 fi
 
 # Custom ls colors
-eval "$(dircolors $dotfiles_dir/no-stow/dircolors)"
+eval "$(dircolors $dotfiles_dir/misc/dircolors)"
 
 source "$dotfiles_dir/bash/sync-history.sh"

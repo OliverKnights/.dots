@@ -27,3 +27,5 @@
   path = nvim
 [mergetool "vimdiff3"]
   path = nvim
+[status]
+  submoduleSummary = true
