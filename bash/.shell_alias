@@ -20,7 +20,7 @@ alias dl="docker logs -f"
 
 # Docker compose
 alias dc="docker-compose"
-alias dcl="docker-compose logs -f --tail=0"
+alias dcl="docker-compose logs"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcb="docker-compose build"
@@ -28,6 +28,7 @@ alias dcs="docker-compose stop"
 
 # Go
 alias gt="go test"
+alias gta="go test ./..."
 
 # Git
 alias gcd='cd $(git rev-parse --show-toplevel)'
