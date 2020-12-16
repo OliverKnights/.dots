@@ -25,3 +25,12 @@
 [submodule "nvim/.config/nvim/pack/plugins/start/vim-lsc"]
 	path = nvim/.config/nvim/pack/plugins/start/vim-lsc
 	url = https://github.com/natebosch/vim-lsc
+[submodule "nvim/.config/nvim/pack/plugins/start/vim-dirvish"]
+	path = nvim/.config/nvim/pack/plugins/start/vim-dirvish
+	url = https://github.com/justinmk/vim-dirvish
+[submodule "nvim/.config/nvim/pack/plugins/start/vim-fugitive"]
+	path = nvim/.config/nvim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "nvim/.config/nvim/pack/plugins/start/fzf.vim"]
+	path = nvim/.config/nvim/pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
