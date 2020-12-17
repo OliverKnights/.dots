@@ -1,4 +1,6 @@
 alias ls="ls --color=auto"
+alias ls="ls --color=auto"
+alias ll='ls -alF'
 
 # Copy, pipe to this to copy output of a command
 alias copy="xclip -i -sel clip"
@@ -10,21 +12,23 @@ alias ts="tig status"
 alias vi="NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim"
 
 # Docker
-alias ds="docker stop"
-alias dt="docker start"
-alias dps="docker ps"
+alias ds="docker stop"; compdef _docker ds="docker-stop"
+alias drm="docker rm"; compdef _docker drm="docker-rm"
+alias dt="docker start"; compdef _docker dt="docker-start"
+alias dps="docker ps"; compdef _docker dps="docker-ps"
 alias dsa='docker stop $(docker ps -a -q)'
 alias dra='docker rm $(docker ps -a -q)'
 alias da="docker attach --sig-proxy=false"
-alias dl="docker logs -f"
+alias dl="docker logs"; compdef _docker dl="docker-logs"
+alias dlf="docker logs -f"; compdef _docker dlf="docker-logs"
 
 # Docker compose
-alias dc="docker-compose"
-alias dcl="docker-compose logs"
-alias dcu="docker-compose up"
-alias dcud="docker-compose up -d"
-alias dcb="docker-compose build"
-alias dcs="docker-compose stop"
+alias dc="docker-compose"; compdef _docker-compose dc="docker-compose"
+alias dcl="docker-compose logs"; compdef _docker-compose dcl="docker-compose logs"
+alias dcu="docker-compose up"; compdef _docker-compose dcu="docker-compose up"
+alias dcud="docker-compose up -d"; compdef _docker-compose dcud="docker-compose up"
+alias dcb="docker-compose build"; compdef _docker-compose dcb="docker-compose build"
+alias dcs="docker-compose stop"; compdef _docker-compose dcs="docker-compose stop"
 
 # Go
 alias gt="go test"
@@ -32,16 +36,17 @@ alias gta="go test ./..."
 
 # Git
 alias gcd='cd $(git rev-parse --show-toplevel)'
-alias ga='git add'
+alias ga='git add'; compdef _git ga="git add"
+alias gl='git log'; compdef _git gl="git log"
 alias gaa='git add . && git status'
-alias gp="git push"
-alias gc="git commit"
-alias gh="git checkout"
-alias ghb="git checkout -b"
-alias gs="git status"
-alias gf="git fetch"
-alias gu="git pull"
-alias gd="git diff"
+alias gp="git push"; compdef _git gp="git push"
+alias gc="git commit"; compdef _git gc="git commit"
+alias gh="git checkout"; compdef _git gh="git checkout"
+alias ghb="git checkout -b"; compdef _git ghb="git checkout"
+alias gs="git status"; compdef _git gs="git status"
+alias gf="git fetch"; compdef _git gf="git fetch"
+alias gu="git pull"; compdef _git gu="git pull"
+alias gd="git diff"; compdef _git gd="git diff"
 
 alias git-commit-date='git add . && git commit -m "$(date)"'
 
@@ -53,14 +58,9 @@ alias decode-jwt-payload="decode-jwt 2"
 
 # Zsh
 alias reload-bash="source $HOME/.bashrc"
+alias reload-zsh="source $HOME/.zshrc"
 
 # Dotfiles
 alias open-tmux-config="vi $HOME/.dots/tmux/.tmux.conf"
 
 alias lynx="lynx -vikeys"
-
-alias tasks="vi +Tasks"
-alias today="vi +Today"
-alias yesterday="vi +Yesterday"
-alias tomorrow="vi +Tomorrow"
-

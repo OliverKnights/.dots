@@ -6,6 +6,7 @@
       org-confirm-babel-evaluate nil
       tramp-default-method "ssh"
       inhibit-startup-screen t
+      initial-scratch-message ""
       show-paren-delay t
       custom-file (concat user-emacs-directory "custom.el")
       vc-follow-symlinks t)
@@ -21,6 +22,9 @@
 
 (add-to-list 'load-path "~/go/pkg/mod/github.com/golangci/lint-1@v0.0.0-20191013205115-297bf364a8e0/misc/emacs/")
 (require 'golint)
+
+;; This should be project local really, I think the list of ignores should be like .gitignore patterns
+(setq-default project-vc-ignores (list "vendor/"))
 
 ;; modes
 (auto-save-visited-mode 1)

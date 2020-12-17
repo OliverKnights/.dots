@@ -1,0 +1,6 @@
+if ! hash pandoc 2>/dev/null; then
+  echo "Please install pandoc"
+  return
+fi
+
+man -Thtml "$1" > "/tmp/$1.html"; pandoc --latex-engine=xelatex "/tmp/$1.html" -o "$1.pdf"
