@@ -33,6 +33,9 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# Open in editor
+autoload -U edit-command-line
+
 # Alias definitions.
 [ -f $HOME/.shell_alias ] && source $HOME/.shell_alias
 [ -f $HOME/.private_shell_alias ] && source $HOME/.private_shell_alias

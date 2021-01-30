@@ -172,7 +172,6 @@ sudo make install
 # Keymaps
 
 https://askubuntu.com/questions/885045/how-to-swap-ctrl-and-alt-keys-in-ubuntu-16-04
-https://askubuntu.com/questions/1133312/how-do-i-remap-caps-lock-to-hyper-key-in-ubuntu-18-04
 See copies of files in ./no-stow/keymaps
 
 # Terminal colors

@@ -55,6 +55,8 @@
 
 (global-set-key (kbd "C-c br") 'rename-buffer)
 
+(global-set-key (kbd "C-c oa") 'org-agenda)
+
 ;; hooks
 (add-hook 'json-mode-hook
           (lambda ()
@@ -125,13 +127,11 @@
    (shell . t)
    (sql . t)
    (org . t)
-   (go . t)
+   (plantuml . t)
    (emacs-lisp . t)
    (lisp . t)    ;; slime - lisp interaction mode
    (gnuplot . t)))
-
-(use-package ob-go
-  :ensure t)
+(setq org-agenda-files (list (expand-file-name "~/Projects/notes")))
 
 (use-package edit-indirect
   :ensure t)
@@ -152,6 +152,13 @@
   (ivy-mode 1)
   (setq ivy-use-virtual-buffers t))
 
+(use-package exec-path-from-shell
+  :ensure t
+  :if (memq window-system '(mac ns x))
+  :config
+  (setq exec-path-from-shell-variables '("PATH" "GOPATH"))
+  (exec-path-from-shell-initialize))
+  
 (setq ring-bell-function 'ignore)
 
 (setq backup-directory-alist
@@ -167,3 +174,14 @@
   '(mapc (lambda (method)
 	   (tramp-set-completion-function method my-tramp-ssh-completions))
 	 '("fcp" "rsync" "scp" "scpc" "scpx" "sftp" "ssh")))
+
+(use-package plantuml-mode
+  :ensure t
+  :mode ("\\.plantuml\\'" . plantuml-mode)
+  :config
+  (setq plantuml-jar-path (expand-file-name "~/Downloads/plantuml.jar"))
+  (setq plantuml-default-exec-mode 'jar))
+
+(add-to-list
+  'org-src-lang-modes '("plantuml" . plantuml))
+(setq org-plantuml-jar-path (expand-file-name "~/Downloads/plantuml.jar"))
