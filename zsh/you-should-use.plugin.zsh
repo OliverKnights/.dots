@@ -2,7 +2,7 @@
 
 export YSU_MESSAGE_POSITION="after"
 export YSU_VERSION='1.7.3'
-export YSU_HARDCORE=1
+export YSU_HARDCORE=0
 
 if ! type "tput" > /dev/null; then
     printf "WARNING: tput command not found on your PATH.\n"
