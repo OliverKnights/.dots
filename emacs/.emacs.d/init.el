@@ -182,6 +182,10 @@
   (setq plantuml-jar-path (expand-file-name "~/Downloads/plantuml.jar"))
   (setq plantuml-default-exec-mode 'jar))
 
+(use-package evil
+  :ensure t)
+
+  
 (add-to-list
   'org-src-lang-modes '("plantuml" . plantuml))
 (setq org-plantuml-jar-path (expand-file-name "~/Downloads/plantuml.jar"))
