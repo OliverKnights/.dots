@@ -104,6 +104,14 @@
   :ensure t
   :mode ("Dockerfile\\'" . dockerfile-mode))
 
+(use-package js2-mode
+  :ensure t
+  :mode "\\.js\\'"
+  :hook ((js2-mode . setup-tide-mode)
+	 (js2-mode . lsp-deferred)
+	 (js2-mode . (lambda ()
+		       (setq js2-basic-offset 4)))))
+  
 (use-package docker-compose-mode
   :ensure t)
 
