@@ -171,7 +171,7 @@ sudo make install
 
 # Keymaps
 
-https://askubuntu.com/questions/885045/how-to-swap-ctrl-and-alt-keys-in-ubuntu-16-04
+Https://askubuntu.com/questions/885045/how-to-swap-ctrl-and-alt-keys-in-ubuntu-16-04
 See copies of files in ./no-stow/keymaps
 
 # Terminal colors
