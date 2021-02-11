@@ -2,6 +2,11 @@
 
 (setq comp-deferred-compilation t
       c-basic-offset 4
+      js-indent-level 2
+      default-tab-width 4
+      tab-width 4
+      c-basic-indent 4
+      dired-listing-switches "-alh"
       package-enable-at-startup nil
       org-confirm-babel-evaluate nil
       tramp-default-method "ssh"
@@ -10,6 +15,9 @@
       show-paren-delay t
       custom-file (concat user-emacs-directory "custom.el")
       vc-follow-symlinks t)
+
+(add-hook 'makefile-mode-hook (lambda ()
+				(setq-local tab-width 4)))
 
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -52,6 +60,8 @@
 (global-set-key (kbd "C-c li") 'lsp-goto-implementation)
 
 (global-set-key (kbd "C-c sv") 'vterm)
+(global-set-key (kbd "C-c ss") 'shell)
+(global-set-key (kbd "C-c uc") 'compile)
 
 (global-set-key (kbd "C-c br") 'rename-buffer)
 
@@ -192,8 +202,15 @@
 
 (use-package evil
   :ensure t)
-
   
 (add-to-list
   'org-src-lang-modes '("plantuml" . plantuml))
 (setq org-plantuml-jar-path (expand-file-name "~/Downloads/plantuml.jar"))
+
+(setq org-refile-targets
+      '(("archive.org" :maxlevel . 1)
+        ("life.org" :maxlevel . 1)))
+
+(use-package vue-mode
+  :ensure t)
+(add-hook 'vue-mode-hook 'lsp-deferred)

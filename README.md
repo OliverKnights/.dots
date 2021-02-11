@@ -1,7 +1,7 @@
 # Package manager
 
 ```
-sudo apt install -y apt-transport-https autoconf automake bison shellcheck build-essential ca-certificates make cmake curl direnv flex g++ gettext git gnome-tweak-tool gnupg-agent gnupg2 htop jq libfontconfig1-dev libfreetype6-dev libgif-dev libgmp-dev libgnutls28-dev libgtk2.0-dev libicu-dev libjansson-dev libjansson4 libjpeg-dev libncurses-dev libncurses5-dev libncursesw5-dev libpng-dev libssl-dev libtiff-dev libtinfo-dev libtool libtool-bin libx11-dev libxcb-xfixes0-dev libxpm-dev lynx mailutils meld mysql-client ncdu network-manager-openvpn network-manager-openvpn-gnome ninja-build openssh-server openvpn pandoc pkg-config python3 python3-pip ranger resolvconf software-properties-common stow taskwarrior tcpdump texinfo tig tlp unzip wmctrl xbacklight xclip xdotool zeal zsh dconf-tools rlwrap gcc pkg-config autoconf automake python3-docutils libseccomp-dev libjansson-dev libyaml-dev libxml2-dev libterm-readkey-perl
+sudo apt install -y apt-transport-https autoconf automake bison shellcheck build-essential ca-certificates make cmake curl direnv flex g++ gettext git gnome-tweak-tool gnupg-agent gnupg2 htop jq libfontconfig1-dev libfreetype6-dev libgif-dev libgmp-dev libgnutls28-dev libgtk2.0-dev libicu-dev libjansson-dev libjansson4 libjpeg-dev libncurses-dev libncurses5-dev libncursesw5-dev libpng-dev libssl-dev libtiff-dev libtinfo-dev libtool libtool-bin libx11-dev libxcb-xfixes0-dev libxpm-dev lynx mailutils meld mysql-client ncdu network-manager-openvpn network-manager-openvpn-gnome ninja-build openssh-server openvpn pandoc pkg-config python3 python3-pip ranger resolvconf software-properties-common stow taskwarrior tcpdump texinfo tig tlp unzip wmctrl xbacklight xclip xdotool zeal zsh dconf-tools rlwrap gcc pkg-config autoconf automake python3-docutils libseccomp-dev libjansson-dev libyaml-dev libxml2-dev libterm-readkey-perl ubuntu-restricted-extras
 ```
 
 # From source
@@ -147,6 +147,7 @@ https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-still-66e609f5f92
 
 ```
 npm install -g typescript-language-server
+npm install -g vue-language-server
 ```
 
 ## Bat
@@ -173,6 +174,7 @@ sudo make install
 
 Https://askubuntu.com/questions/885045/how-to-swap-ctrl-and-alt-keys-in-ubuntu-16-04
 See copies of files in ./no-stow/keymaps
+dconf write "/org/gnome/desktop/input-sources/xkb-options" "['ctrl:swap_lalt_lctl','ctrl:swap_ralt_rctl']"
 
 # Terminal colors
 
