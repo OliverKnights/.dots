@@ -35,6 +35,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Open in editor
 autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
 
 # Alias definitions.
 [ -f $HOME/.shell_alias ] && source $HOME/.shell_alias
