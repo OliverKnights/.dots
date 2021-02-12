@@ -34,3 +34,6 @@
 [submodule "nvim/.config/nvim/pack/plugins/start/fzf.vim"]
 	path = nvim/.config/nvim/pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "nvim/.config/nvim/pack/plugins/start/wiki.vim"]
+	path = nvim/.config/nvim/pack/plugins/start/wiki.vim
+	url = https://github.com/lervag/wiki.vim
