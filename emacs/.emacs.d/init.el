@@ -31,11 +31,14 @@
 (add-to-list 'load-path "~/go/pkg/mod/github.com/golangci/lint-1@v0.0.0-20191013205115-297bf364a8e0/misc/emacs/")
 (require 'golint)
 
+(load "~/.emacs.d/private.el")
+
 ;; This should be project local really, I think the list of ignores should be like .gitignore patterns
 (setq-default project-vc-ignores (list "vendor/"))
 
 ;; modes
 (auto-save-visited-mode 1)
+(desktop-save-mode 1)
 ;; (show-paren-mode 1)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -75,6 +78,9 @@
 	   
 ;; packages
 (use-package ace-window
+  :ensure t)
+
+(use-package restclient
   :ensure t)
 
 (use-package which-key
@@ -174,7 +180,7 @@
   :ensure t
   :if (memq window-system '(mac ns x))
   :config
-  (setq exec-path-from-shell-variables '("PATH" "GOPATH"))
+  (setq exec-path-from-shell-variables '("PATH" "GOPATH" "AC_SERVER_TYPE"))
   (exec-path-from-shell-initialize))
   
 (setq ring-bell-function 'ignore)
@@ -214,3 +220,4 @@
 (use-package vue-mode
   :ensure t)
 (add-hook 'vue-mode-hook 'lsp-deferred)
+
