@@ -1,0 +1,25 @@
+#!/bin/bash
+
+cmd="$1"
+
+if [[ $# == 0 ]]; then
+  cat <<HERE
+'update'
+
+'clean'
+HERE
+exit 1
+fi
+
+if [[ $cmd == 'update' ]]; then
+  git pull --recurse-submodules --jobs=8
+  nvim +':helptags ALL'
+fi
+
+if [[ $cmd == 'clean' ]]; then
+  git clean -xfd
+  git submodule foreach --recursive git clean -xfd
+  git reset --hard
+  git submodule foreach --recursive git reset --hard
+  git submodule update --init --recursive
+fi
