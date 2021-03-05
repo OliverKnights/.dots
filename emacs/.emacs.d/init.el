@@ -36,6 +36,16 @@
 ;; This should be project local really, I think the list of ignores should be like .gitignore patterns
 (setq-default project-vc-ignores (list "vendor/"))
 
+;; autosave
+(defadvice switch-to-buffer (before save-buffer-now activate)
+  (when buffer-file-name (save-buffer)))
+(defadvice other-window (before other-window-now activate)
+  (when buffer-file-name (save-buffer)))
+(defadvice other-frame (before other-frame-now activate)
+  (when buffer-file-name (save-buffer)))
+(defadvice ace-window (before other-frame-now activate)
+  (when buffer-file-name (save-buffer)))
+
 ;; modes
 (auto-save-visited-mode 1)
 (desktop-save-mode 1)
@@ -80,6 +90,13 @@
 (use-package ace-window
   :ensure t)
 
+(use-package company
+  :ensure t
+  :hook (after-init . global-company-mode))
+
+(use-package company-go
+  :ensure t)
+  
 (use-package restclient
   :ensure t)
 
@@ -104,8 +121,12 @@
 (use-package go-mode
   :ensure t
   :hook ((go-mode . lsp-deferred)
-	 (go-mode . (lambda () (setq tab-width 4
-				     indent-tabs-mode 1)))
+	 (go-mode . (lambda ()
+		      (setq tab-width 4
+			    indent-tabs-mode 1)))
+	 (go-mode . (lambda ()
+		      (set (make-local-variable 'company-backends) '(company-go))
+		      (company-mode)))
          (before-save . lsp-format-buffer)
          (before-save . lsp-organize-imports)
 	 (before-save . gofmt-before-save)))
