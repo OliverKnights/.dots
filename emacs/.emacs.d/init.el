@@ -48,6 +48,8 @@
 
 ;; modes
 (auto-save-visited-mode 1)
+(global-hl-line-mode 1)
+(global-visual-line-mode 1)
 (desktop-save-mode 1)
 ;; (show-paren-mode 1)
 (menu-bar-mode -1)
@@ -62,7 +64,7 @@
 (setq leetcode-directory "~/Projects/leetcode")
 
 ;; theme
-(load-theme 'leuven t)
+;;(load-theme 'modus-operandi t)
 
 ;; bindings
 (global-set-key (kbd "M-o") 'ace-window)
@@ -85,7 +87,7 @@
           (lambda ()
             (make-local-variable 'js-indent-level)
             (setq js-indent-level 2)))
-	   
+
 ;; packages
 (use-package ace-window
   :ensure t)
@@ -96,7 +98,7 @@
 
 (use-package company-go
   :ensure t)
-  
+
 (use-package restclient
   :ensure t)
 
@@ -148,7 +150,7 @@
 	 (js2-mode . lsp-deferred)
 	 (js2-mode . (lambda ()
 		       (setq js2-basic-offset 4)))))
-  
+
 (use-package docker-compose-mode
   :ensure t)
 
@@ -203,7 +205,7 @@
   :config
   (setq exec-path-from-shell-variables '("PATH" "GOPATH" "AC_SERVER_TYPE"))
   (exec-path-from-shell-initialize))
-  
+
 (setq ring-bell-function 'ignore)
 
 (setq backup-directory-alist
@@ -229,7 +231,7 @@
 
 (use-package evil
   :ensure t)
-  
+
 (add-to-list
   'org-src-lang-modes '("plantuml" . plantuml))
 (setq org-plantuml-jar-path (expand-file-name "~/Downloads/plantuml.jar"))
