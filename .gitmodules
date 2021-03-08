@@ -34,12 +34,6 @@
 [submodule "nvim/.config/nvim/pack/plugins/start/fzf.vim"]
 	path = nvim/.config/nvim/pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
-[submodule "nvim/.config/nvim/pack/plugins/start/wiki.vim"]
-	path = nvim/.config/nvim/pack/plugins/start/wiki.vim
-	url = https://github.com/lervag/wiki.vim
 [submodule "tools/fasd"]
 	path = tools/fasd
-	url = git@github.com:clvv/fasd.git
-[submodule "nvim/.config/nvim/pack/plugins/start/vim-goimports"]
-	path = nvim/.config/nvim/pack/plugins/start/vim-goimports
-	url = git@github.com:mattn/vim-goimports.git
+	url = https://github.com/clvv/fasd

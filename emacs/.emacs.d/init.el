@@ -36,8 +36,13 @@
 ;; This should be project local really, I think the list of ignores should be like .gitignore patterns
 (setq-default project-vc-ignores (list "vendor/"))
 
+;; font
+(set-face-attribute 'default nil :font "DejaVu Sans Mono-12")
+
 ;; modes
 (auto-save-visited-mode 1)
+(global-hl-line-mode 1)
+(global-visual-line-mode 1)
 (desktop-save-mode 1)
 ;; (show-paren-mode 1)
 (menu-bar-mode -1)
@@ -52,7 +57,7 @@
 (setq leetcode-directory "~/Projects/leetcode")
 
 ;; theme
-(load-theme 'leuven t)
+;;(load-theme 'modus-operandi t)
 
 ;; bindings
 (global-set-key (kbd "M-o") 'ace-window)
