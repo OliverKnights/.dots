@@ -64,7 +64,7 @@
 (setq leetcode-directory "~/Projects/leetcode")
 
 ;; theme
-;;(load-theme 'modus-operandi t)
+(load-theme 'modus-operandi t)
 
 ;; bindings
 (global-set-key (kbd "M-o") 'ace-window)
@@ -203,7 +203,7 @@
   :ensure t
   :if (memq window-system '(mac ns x))
   :config
-  (setq exec-path-from-shell-variables '("PATH" "GOPATH" "AC_SERVER_TYPE"))
+  (setq exec-path-from-shell-variables '("PATH" "GOPATH"))
   (exec-path-from-shell-initialize))
 
 (setq ring-bell-function 'ignore)

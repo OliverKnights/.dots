@@ -27,3 +27,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 [ -f "$HOME/.shellenv" ] && source "$HOME/.shellenv"
+source "$HOME/.cargo/env"

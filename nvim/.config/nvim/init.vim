@@ -5,12 +5,12 @@ let g:did_install_default_menus = 1  " avoid stupid menu.vim (saves ~100ms)
 let mapleader      = "\<Space>"
 let maplocalleader = "\\"
 
-" if has('termguicolors')                              " Use truecolor if available
-"   set termguicolors
-" endif
+if has('termguicolors')                              " Use truecolor if available
+  set termguicolors
+endif
 
 set background=light
-" colorscheme myscheme
+colorscheme myscheme
 
 filetype plugin indent on                             " File types
 syntax on                                      " Enable syntax highlighting
@@ -258,6 +258,17 @@ nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
+
+" Wiki
+let g:wiki_root = '~/Projects/notes'
+let g:wiki_filetypes = ['md']
+let g:wiki_link_extension = '.md'
+let g:wiki_map_link_create = 'MyFunction'
+let g:wiki_link_target_type = 'md'
+
+function MyFunction(text) abort
+  return substitute(tolower(a:text), '\s\+', '-', 'g')
+endfunction
 
 " match brackets
 inoremap (<CR> (<CR>)<Esc>O

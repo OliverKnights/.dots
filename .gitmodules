@@ -37,3 +37,15 @@
 [submodule "tools/fasd"]
 	path = tools/fasd
 	url = https://github.com/clvv/fasd
+[submodule "nvim/.config/nvim/pack/plugins/start/vim-goimports"]
+	path = nvim/.config/nvim/pack/plugins/start/vim-goimports
+	url = git@github.com:mattn/vim-goimports.git
+[submodule "tools/ncspot"]
+	path = tools/ncspot
+	url = https://github.com/hrkfdn/ncspot
+[submodule "nvim/.config/nvim/pack/plugins/start/wiki.vim"]
+	path = nvim/.config/nvim/pack/plugins/start/wiki.vim
+	url = https://github.com/lervag/wiki.vim
+[submodule "nvim/.config/nvim/pack/plugins/start/bullets.vim"]
+	path = nvim/.config/nvim/pack/plugins/start/bullets.vim
+	url = https://github.com/dkarter/bullets.vim
