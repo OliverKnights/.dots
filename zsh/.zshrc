@@ -1,6 +1,6 @@
 # Set up the prompt
 autoload -Uz promptinit && promptinit
-PROMPT='%B($env_name)%b %1~ %# '
+PROMPT='%B%1~%b %# '
 
 # Use env vars in prompt
 setopt prompt_subst
@@ -13,6 +13,13 @@ setopt histignorealldups sharehistory
 HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/.zsh_history
+
+# Completion
+fpath=($HOME/.zsh/completion "${fpath[@]}")
+
+# Functions
+fpath=($HOME/.zsh/funcs "${fpath[@]}")
+autoload -Uz $fpath[1]/*(.:t)
 
 # Use completion system
 autoload -Uz compinit && compinit -i
@@ -48,10 +55,6 @@ bindkey '^x^e' edit-command-line
 
 # Plugin
 [ -f ~/.dots/zsh/you-should-use.plugin.zsh ] && source ~/.dots/zsh/you-should-use.plugin.zsh
-
-# Functions
-fpath=($HOME/.dots/zsh/.zsh_funcs $HOME/.zsh/completion ${fpath[@]})
-autoload -Uz $fpath[1]/*(.:t)
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
