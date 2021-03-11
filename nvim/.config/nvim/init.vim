@@ -5,12 +5,12 @@ let g:did_install_default_menus = 1  " avoid stupid menu.vim (saves ~100ms)
 let mapleader      = "\<Space>"
 let maplocalleader = "\\"
 
-if has('termguicolors')                              " Use truecolor if available
-  set termguicolors
-endif
+" if has('termguicolors')                              " Use truecolor if available
+"   set termguicolors
+" endif
 
 set background=light
-colorscheme myscheme
+" colorscheme myscheme
 
 filetype plugin indent on                             " File types
 syntax on                                      " Enable syntax highlighting
