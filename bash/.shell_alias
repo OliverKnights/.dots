@@ -5,6 +5,9 @@ alias ll='ls -alF'
 # Copy, pipe to this to copy output of a command
 alias copy="xclip -i -sel clip"
 
+# w3m
+alias wgo="w3m google.com"
+
 # tig
 alias ts="tig status"
 

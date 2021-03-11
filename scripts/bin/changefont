@@ -1,0 +1,14 @@
+#!/bin/bash
+
+fontdir=/usr/share/consolefonts
+
+fonts=$(ls $fontdir)
+echo $fonts
+
+for font in $fonts; do
+  setfont "$fontdir/$font"
+  echo "showing $font"
+  showconsolefont
+  read -p "next?" -n 1 -r
+done
+

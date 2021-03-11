@@ -1,0 +1,18 @@
+#!/bin/bash
+# assuming bdf2psf is installed
+FONTDIR=/usr/share/consolefonts
+SPLEENDIR=/home/oliver/clones/bitmap-fonts
+EQUIV=/usr/share/bdf2psf/standard.equivalents # check bdf2psf manpage
+FONTSET=/usr/share/bdf2psf/fontsets/Uni1.512 # check bdf2psf manpage
+
+for x in $(find $SPLEENDIR -name '*.bdf'); do
+  echo $x
+  bdf2psf --fb \
+    $x \
+    $EQUIV $FONTSET 512 \
+    ${FONTDIR}/$(basename -- $x).psfu
+done
+
+# assuming you're in the TTY
+# setfont ${SPLEENDIR}/spleen-16x32.psfu
+
