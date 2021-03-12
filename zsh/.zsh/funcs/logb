@@ -1,0 +1,1 @@
+tmux splitw -h 'cd ~/Projects/notes && nvim logbook.md'
