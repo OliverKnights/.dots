@@ -238,6 +238,9 @@ augroup mygroup
   " Highlight valid links
   "au BufWinEnter * lua require'links'.valid_links()
 
+  " Groovy
+  au BufNewFile,BufRead Jenkinsfile setf groovy
+
   " Status
   au VimEnter,WinEnter,BufWinEnter * call status#RefreshStatus()
 augroup END

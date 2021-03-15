@@ -28,3 +28,7 @@ fi
 
 [ -f "$HOME/.shellenv" ] && source "$HOME/.shellenv"
 source "$HOME/.cargo/env"
+
+# save keyboard mods
+setxkbmap -option 'caps:swapescape' -option 'lv3:ralt_alt'
+

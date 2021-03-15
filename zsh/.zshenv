@@ -49,4 +49,5 @@ export BAT_THEME="GitHub"
 export dotfiles_dir="$HOME/.dots"
 export project_dir="$HOME/Projects"
 
-source "$HOME/.cargo/env"
+export GPG_TTY=$(tty)
+
