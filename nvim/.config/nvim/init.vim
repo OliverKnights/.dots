@@ -10,7 +10,7 @@ let maplocalleader = "\\"
 " endif
 
 set background=light
-" colorscheme myscheme
+colorscheme myscheme
 
 filetype plugin indent on                             " File types
 syntax on                                      " Enable syntax highlighting
