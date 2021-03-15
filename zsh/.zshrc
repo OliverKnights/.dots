@@ -63,22 +63,28 @@ export NVM_DIR="$HOME/.nvm"
 # fasd
 eval "$(fasd --init auto)"
 
-if [ "$TERM" = "linux" ]; then
-    echo -en "\e]P0eeeeee" #black
-    echo -en "\e]P82B2B2B" #darkgrey
-    echo -en "\e]P1D75F5F" #darkred
-    echo -en "\e]P9E33636" #red
-    echo -en "\e]P287AF5F" #darkgreen
-    echo -en "\e]PA98E34D" #green
-    echo -en "\e]P3D7AF87" #brown
-    echo -en "\e]PBFFD75F" #yellow
-    echo -en "\e]P48787AF" #darkblue
-    echo -en "\e]PC7373C9" #blue
-    echo -en "\e]P5BD53A5" #darkmagenta
-    echo -en "\e]PDD633B2" #magenta
-    echo -en "\e]P65FAFAF" #darkcyan
-    echo -en "\e]PE44C9C9" #cyan
-    echo -en "\e]P7000000" #lightgrey
-    echo -en "\e]PF000000" #white
-    clear #for background artifacting
+if [ -f ~/.dir_colors ]; then
+  eval `dircolors ~/.dir_colors`
 fi
+
+# if [ "$TERM" = "linux" ]; then
+#     echo -en "\e]P0eeeeee" #black and background
+#     echo -en "\e]P8000000" #darkgrey
+#     echo -en "\e]P1000000" #darkred
+#     echo -en "\e]P9000000" #red
+#     echo -en "\e]P2000000" #darkgreen
+#     echo -en "\e]PA000000" #green
+#     echo -en "\e]P3000000" #brown
+#     echo -en "\e]PB000000" #yellow
+#     echo -en "\e]P4000000" #darkblue
+#     echo -en "\e]PC000000" #blue
+#     echo -en "\e]P5000000" #darkmagenta
+#     echo -en "\e]PD000000" #magenta
+#     echo -en "\e]P6000000" #darkcyan
+#     echo -en "\e]PE000000" #cyan
+#     echo -en "\e]P7000000" #lightgrey
+#     echo -en "\e]PF000000" #white and foreground
+#     clear #for background artifacting
+# fi
+
+
